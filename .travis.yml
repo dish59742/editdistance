@@ -1,5 +1,6 @@
 env:
   global:
+    - CIBW_BUILD="cp36-* cp37-* cp38-* cp39-*"
     - CIBW_TEST_REQUIRES=nose
     - CIBW_TEST_COMMAND="nosetests {project}/test"
     - TWINE_USERNAME=aflc
@@ -27,7 +28,7 @@ script:
     if [ "$TRAVIS_OS_NAME" == "osx" ]; then
       sudo pip3 install cibuildwheel==0.10.1 twine
     else
-      pip3 install cibuildwheel==0.10.1 twine
+      pip3 install cibuildwheel==1.10.0 twine
     fi
 - cibuildwheel --output-dir wheelhouse
 - |
