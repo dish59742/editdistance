@@ -11,6 +11,13 @@ matrix:
       python: 3.6
       env:
         - INSTALL_SOURCE=true
+    - os: linux
+      arch: arm64
+      dist: xenial
+      language: python
+      python: 3.6
+      env:
+        - INSTALL_SOURCE=true
     - os: osx
       sudo: required
       language: generic
