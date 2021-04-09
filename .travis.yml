@@ -1,6 +1,6 @@
 env:
   global:
-    - CIBW_BUILD="cp35-* cp36-* cp37-* cp38-* cp39-*"
+    - CIBW_SKIP="cp27-*"
     - CIBW_TEST_REQUIRES=nose
     - CIBW_TEST_COMMAND="nosetests {project}/test"
     - TWINE_USERNAME=aflc
