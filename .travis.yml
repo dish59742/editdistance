@@ -13,8 +13,9 @@ matrix:
       env:
         - INSTALL_SOURCE=true
     - os: linux
-      arch: arm64
+      arch: arm64-graviton2
       dist: xenial
+      group: edge
       language: python
       python: 3.6
       env:
